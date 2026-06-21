@@ -9,7 +9,7 @@ export const Route = createRootRoute({
 
 function RootComponent() {
   return (
-    <div className='"w-full overflow-x-hidden'>
+    <div className='"w-full m-auto max-w-360 overflow-x-hidden'>
       <NavBar />
       <Outlet />
     </div>

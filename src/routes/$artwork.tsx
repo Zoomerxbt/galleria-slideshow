@@ -1,9 +1,24 @@
 import { createFileRoute } from '@tanstack/react-router'
+// import Artwork from '#/components/Artwork'
+import Footer from '#/components/Footer'
+import galleryData from '../data/data.json'
 
 export const Route = createFileRoute('/$artwork')({
-  component: RouteComponent,
+  loader: ({ params }) => {
+    const artist = galleryData.find((n) => n.name === params.artwork)
+    if (!artist) {
+      throw new Error('Artist not found')
+    }
+    return artist
+  },
+
+  component: ArtPiece,
 })
 
-function RouteComponent() {
-  return <div></div>
+function ArtPiece() {
+  return (
+    <div className="">
+      <Footer />
+    </div>
+  )
 }

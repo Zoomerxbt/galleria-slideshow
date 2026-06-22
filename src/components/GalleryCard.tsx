@@ -2,7 +2,7 @@ import { Link } from '@tanstack/react-router'
 
 const GalleryCard = ({ artwork }: { artwork: any }) => {
   return (
-    <div className="relative break-inside-avoid mb-6">
+    <div className="relative break-inside-avoid ">
       <Link
         to={`/$artwork`}
         params={{ artwork: artwork.name.toLowerCase().replace(/\s+/g, '-') }}

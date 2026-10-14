@@ -23,9 +23,9 @@ function ArtPiece() {
   const artworkData = Route.useLoaderData()
 
   return (
-    <div className="">
+    <>
       <ArtworkDetails artwork={artworkData} />
       <Footer artwork={artworkData} />
-    </div>
+    </>
   )
 }

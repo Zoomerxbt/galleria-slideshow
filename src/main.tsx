@@ -6,6 +6,7 @@ const router = createRouter({
   routeTree,
   defaultPreload: 'intent',
   scrollRestoration: true,
+  basepath: '/galleria-slideshow',
 })
 
 declare module '@tanstack/react-router' {
